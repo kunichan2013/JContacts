@@ -1,0 +1,140 @@
+﻿{
+	"toJSON": true,
+	"dbInfo": [
+		{
+			"name": "Model",
+			"uuid": "20202020202020202020202020202020"
+		}
+	],
+	"extraProperties": {
+		"version": "1",
+		"classes": {
+			"会社": {
+				"panelColor": "#70CCC2",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 29,
+						"Y": 12
+					}
+				}
+			},
+			"社員": {
+				"panelColor": "#fff",
+				"panel": {
+					"isOpen": "true",
+					"pathVisible": true,
+					"position": {
+						"X": 457,
+						"Y": 17
+					}
+				}
+			}
+		},
+		"model": {
+			"workspaceLeft": 0,
+			"workspaceTop": 0
+		}
+	},
+	"dataClasses": [
+		{
+			"name": "会社",
+			"className": "会社",
+			"collectionName": "会社Collection",
+			"scope": "public",
+			"publishAsJSGlobal": true,
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "名前",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string"
+				},
+				{
+					"name": "資本金",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number",
+					"defaultFormat": [
+						{
+							"format": "###,##0",
+							"locale": "ja",
+							"presentation": "text"
+						}
+					]
+				}
+			],
+			"methods": [
+				{
+					"name": "test1",
+					"applyTo": "entityCollection",
+					"scope": "publicOnServer",
+					"from": "guidedModel.会社.collectionMethods.test1"
+				},
+				{
+					"name": "testc1",
+					"applyTo": "dataClass",
+					"scope": "publicOnServer",
+					"from": "guidedModel.会社.methods.testc1"
+				},
+				{
+					"name": "試験１",
+					"applyTo": "entityCollection",
+					"scope": "publicOnServer",
+					"from": "guidedModel.会社.collectionMethods.試験１"
+				}
+			]
+		},
+		{
+			"name": "社員",
+			"className": "社員",
+			"collectionName": "社員Collection",
+			"scope": "public",
+			"publishAsJSGlobal": true,
+			"attributes": [
+				{
+					"name": "ID",
+					"kind": "storage",
+					"scope": "public",
+					"unique": true,
+					"autosequence": true,
+					"type": "long",
+					"primKey": true
+				},
+				{
+					"name": "氏名",
+					"kind": "storage",
+					"scope": "public",
+					"type": "string",
+					"minLength": "2"
+				},
+				{
+					"name": "給料",
+					"kind": "storage",
+					"scope": "public",
+					"type": "number",
+					"defaultFormat": [
+						{
+							"format": "###,##0",
+							"locale": "ja",
+							"presentation": "text"
+						}
+					],
+					"minValue": "50000",
+					"defaultValue": "250000"
+				}
+			]
+		}
+	],
+	"type": []
+}
